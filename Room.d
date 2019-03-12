@@ -1,4 +1,5 @@
 import std.stdio;
+
 import Item;
 
 class Room {
@@ -63,5 +64,7 @@ class Room {
     exits_['E'] = e;
     exits_['W'] = w;
   }
+  /*void setExits(Exit[] e...) {
+  }*/
 
 }
