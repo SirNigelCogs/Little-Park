@@ -10,7 +10,8 @@ import State;
 
 enum AUTHOR = "Sir Nigel Cogs";
 enum CONTACT = "@SirNigelCogs on Twitter and Github";
-enum MAX_SCORE = 200;
+//enum MAX_SCORE = 200;
+int MAX_SCORE;
 enum STARTING_ROOM = 0;
 enum VERSION = 0.2;
 
@@ -25,6 +26,7 @@ void main() {
   State state;
 
   Map map = new Map(STARTING_ROOM, initGame());
+  MAX_SCORE = map.calculateMaxScore();
 
   Room currentRoom = map.getCurrentRoom();
 

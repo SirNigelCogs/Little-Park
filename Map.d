@@ -14,6 +14,16 @@ class Map {
     this.rooms_ = rooms;
   }
 
+  int calculateMaxScore() {
+    int score;
+    foreach (room; rooms_) {
+      foreach (item; room.getItems()) {
+        score += item.scoreValue;
+      }
+    }
+    return score;
+  }
+
   ref Room getCurrentRoom() {
     return rooms_[player_.loc];
   }
