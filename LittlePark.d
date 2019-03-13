@@ -202,6 +202,9 @@ void parse(string[] words, ref State state, ref Map map) {
           }
         }
       }
+      else {
+        goto default;
+      }
       break;
     case 2:
       if (words[0] == "ENTER") {
@@ -270,8 +273,12 @@ void parse(string[] words, ref State state, ref Map map) {
           writeln("You don't see that here.");
         }
       }
+      else {
+        goto default;
+      }
       break;
     default:
+      writeln("What?");
       break;
   }
 
