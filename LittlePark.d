@@ -39,6 +39,7 @@ void main() {
     write(">");
     input = strip(readln());
     input = toUpper(input);
+    writeln();
 
     string[] words = input.split();
     words = filterWords(words);
@@ -46,6 +47,7 @@ void main() {
     parse(words, state, map);
 
     if (state.look) {
+      write("\n\n\n\n\n");
       writeln(look(map.getCurrentRoom()));
       state.look = false;
     }
