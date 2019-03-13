@@ -3,6 +3,7 @@ import std.string;
 import std.conv;
 
 import Item;
+import InitGame;
 import Map;
 import Player;
 import Room;
@@ -13,7 +14,7 @@ enum CONTACT = "@SirNigelCogs on Twitter and Github";
 //enum MAX_SCORE = 200;
 int MAX_SCORE;
 enum STARTING_ROOM = 0;
-enum VERSION = 0.2;
+enum VERSION = 0.6;
 
 void main() {
   writeln("Welcome to Little Park v", VERSION);
@@ -25,7 +26,7 @@ void main() {
 
   State state;
 
-  Map map = new Map(STARTING_ROOM, initGame());
+  Map map = new Map(STARTING_ROOM, InitGame.initGame());
   MAX_SCORE = map.calculateMaxScore();
 
   Room currentRoom = map.getCurrentRoom();
