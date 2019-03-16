@@ -13,16 +13,13 @@ class Room {
 
   Item[string] items;
 
-  Wrap words;
-
   bool scoreRoom_;
 
   public:
 
   this(string name_, string desc_) {
-    words = Wrap(60);
     this.name_ = name_;
-    this.desc_ = words.wrap(desc_);
+    this.desc_ = wrap(desc_);
     scoreRoom_ = false;
   }
 

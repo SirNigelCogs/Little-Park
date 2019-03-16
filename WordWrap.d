@@ -1,32 +1,22 @@
-struct Wrap {
-  private:
+enum WORD_WRAP_LENGTH = 60;
 
-  int position;
+string wrap(string s) {
+  string line;
+  int count = 0;
 
-  public:
-
-  this(in int position) {
-    this.position = position;
-  }
-
-  string wrap(string s) {
-    string line;
-    int count = 0;
-
-    foreach (letter; s) {
-      if (count < position) {
-        line ~= letter;
-        ++count;
-      }
-      else if (letter == ' ') {
-        line ~= "\n";
-        count = 0;
-      }
-      else {
-        line ~= letter;
-      }
+  foreach (letter; s) {
+    if (count < WORD_WRAP_LENGTH) {
+      line ~= letter;
+      ++count;
     }
-
-    return line;
+    else if (letter == ' ') {
+      line ~= "\n";
+      count = 0;
+    }
+    else {
+      line ~= letter;
+    }
   }
+
+  return line;
 }
