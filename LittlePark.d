@@ -19,6 +19,8 @@ enum VERSION = 0.6;
 void main() {
   writeln("Welcome to Little Park v", VERSION);
   writeln("The amazing adventure about some things.");
+  writeln("Little Park is a small game and technical demo based around");
+  writeln("The simple TextExplore text adventure game engine.");
   writeln();
   writeln("Written by ", AUTHOR);
   writeln("Contact:  ", CONTACT);
