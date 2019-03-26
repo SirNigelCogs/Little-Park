@@ -106,6 +106,15 @@ string[] filterWords(string[] words) {
     else if (word == "NORTH") {
       list ~= "N";
     }
+    else if (word == "SOUTH") {
+      list ~= "S";
+    }
+    else if (word == "EAST") {
+      list ~= "E";
+    }
+    else if (word == "WEST") {
+      list ~= "W";
+    }
     else if (word == "LOOK") {
       list ~= "L";
     }
