@@ -8,6 +8,7 @@ import Map;
 import Player;
 import Room;
 import State;
+import WordWrap;
 
 enum AUTHOR = "Sir Nigel Cogs";
 enum CONTACT = "@SirNigelCogs on Twitter and Github";
@@ -204,6 +205,9 @@ void parse(string[] words, ref State state, ref Map map) {
           }
         }
       }
+      else if (words[0] == "?") {
+        printCommands();
+      }
       else {
         goto default;
       }
@@ -284,4 +288,12 @@ void parse(string[] words, ref State state, ref Map map) {
       break;
   }
 
+}
+
+void printCommands() {
+  writeln("Available commands:");
+  string commands = "(l)ook (n)orth (s)outh (e)ast (w)est (enter) (get) (drop) (i)nventory (read) (examine) (score)";
+  commands = WordWrap.wrap(commands);
+  writeln(commands);
+  writeln("");
 }
