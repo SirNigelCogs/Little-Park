@@ -10,5 +10,7 @@ Like many classic text adventure games, especially those on 8-bit platforms like
 explore and collect all the treasure items and bring them to a specific room where their score values will be counted up.  The
 game is won by finding all the treasure items.
 
+When you're playing the game you can use the ? command to list all the available commands.
+
 The easiest way to compile the code is by running "dmd -i -O -release LittlePark.d".  If you want to keep the debug symbols in
 the compiled binary, simply don't add the -release flag.
